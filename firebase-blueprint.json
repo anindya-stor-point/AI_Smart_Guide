@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Analysis": {
+      "title": "Analysis",
+      "description": "App screen analysis results",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "appName": { "type": "string" },
+        "userStatus": { "type": "string", "enum": ["New", "Returning"] },
+        "instructions": { "type": "string" },
+        "voiceScript": { "type": "string" },
+        "arrowPosition": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" }
+          }
+        },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "appName", "instructions", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile data"
+    },
+    "/analyses/{analysisId}": {
+      "schema": "Analysis",
+      "description": "Stored screen analyses"
+    }
+  }
+}
