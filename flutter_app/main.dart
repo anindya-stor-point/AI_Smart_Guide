@@ -51,6 +51,15 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _startLiveGuide() async {
     if (isRunning) return;
 
+    // Android 13+ Notification Permission
+    if (Platform.isAndroid) {
+      final status = await Permission.notification.request();
+      if (status.isDenied) {
+        // Handle denied permission
+        return;
+      }
+    }
+
     // ওভারলে পারমিশন চেক
     if (!await FlutterOverlayWindow.isPermissionGranted()) {
       await FlutterOverlayWindow.requestPermission();
