@@ -11,7 +11,7 @@ dependencies:
   google_generative_ai: ^0.4.0
   flutter_tts: ^4.0.2
   flutter_overlay_window: ^0.4.1
-  screen_capturer: ^0.1.8
+  screen_capturer: ^0.2.3
   path_provider: ^2.1.2
   permission_handler: ^11.3.0
 

@@ -88,9 +88,12 @@ class _HomeScreenState extends State<HomeScreen> {
       final String imagePath = '${directory.path}/screenshot.png';
       
       // স্ক্রিন ক্যাপচার
-      await ScreenCapturer.instance.captureScreen(
+      final CapturedData? capturedData = await ScreenCapturer.instance.captureScreen(
         imagePath: imagePath,
+        silent: true,
       );
+
+      if (capturedData == null) return;
 
       final File imageFile = File(imagePath);
       final bytes = await imageFile.readAsBytes();
