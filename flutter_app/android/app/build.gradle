@@ -1,6 +1,16 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
 android {
     namespace "com.example.bengali_app_guide"
     compileSdk 34
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 
     defaultConfig {
         applicationId "com.example.bengali_app_guide"
@@ -9,4 +19,16 @@ android {
         versionCode 1
         versionName "1.0.0"
     }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
 }
+
+flutter {
+    source '../..'
+}
+
+dependencies {}
