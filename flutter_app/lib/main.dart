@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final FlutterTts _tts = FlutterTts();
   
   // আপনার জেমিনি এপিআই কী এখানে দিন
-  final String apiKey = "YOUR_GEMINI_API_KEY";
+  final String apiKey = "AIzaSyCb_jOE_RIDEmY59HDAqpHyb_CUO5viCs0";
 
   @override
   void initState() {
@@ -256,4 +256,4 @@ class _FloatingGuideOverlayState extends State<FloatingGuideOverlay> {
     );
   }
 }
-
+// Final Sync Trigger - Force Sync
