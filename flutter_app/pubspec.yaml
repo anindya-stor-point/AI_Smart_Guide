@@ -1,6 +1,6 @@
 name: bengali_app_guide
 description: A live interactive guide app using Gemini AI.
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
