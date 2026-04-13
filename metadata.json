@@ -1,5 +1,5 @@
 {
-  "name": "Bengali App Guide (বাংলা অ্যাপ গাইড)",
-  "description": "A live interactive guide app that provides real-time Bengali voice and visual guidance (overlay) for navigating any Android application using Gemini AI.",
+  "name": "AI Smart Guide (বাংলা অ্যাপ গাইড)",
+  "description": "A live interactive guide app using Gemini AI for real-time Bengali guidance.",
   "requestFramePermissions": ["camera"]
 }
