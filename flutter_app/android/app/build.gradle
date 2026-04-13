@@ -23,7 +23,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.bengali_app_guide"
-        minSdk 21
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0.0"
