@@ -256,4 +256,4 @@ class _FloatingGuideOverlayState extends State<FloatingGuideOverlay> {
     );
   }
 }
-// AI Smart Guide Final Sync Trigger
+// AI Smart Guide Force Sync Trigger - 2026-04-13
