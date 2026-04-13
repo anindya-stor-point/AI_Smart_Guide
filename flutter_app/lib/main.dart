@@ -7,6 +7,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 import 'package:screen_capturer/screen_capturer.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -88,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
       final String imagePath = '${directory.path}/screenshot.png';
       
       // স্ক্রিন ক্যাপচার
-      final CapturedData? capturedData = await ScreenCapturer.instance.captureScreen(
+      final CapturedData? capturedData = await ScreenCapturer.instance.capture(
         imagePath: imagePath,
         silent: true,
       );
