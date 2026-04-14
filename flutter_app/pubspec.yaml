@@ -1,6 +1,6 @@
 name: ai_smart_guide
 description: A live interactive guide app using Gemini AI.
-version: 1.9.2+22
+version: 1.9.3+23
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
